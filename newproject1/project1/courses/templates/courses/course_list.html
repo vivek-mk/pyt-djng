@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well">
+                {% for instance in object_list %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">{{ instance.title }}</div>
+                        <div class="panel-body"><a href="/courses/{{instance.id}}">{{ instance.id }} - {{ instance.title }}</a></div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
